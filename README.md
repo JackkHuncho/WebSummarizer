@@ -75,7 +75,3 @@ Please follow the existing code style and write clear commit messages.
 
 ---
 
-## 📝 License
-
-Distributed under the **MIT License**. See `LICENSE` for more information.
-
