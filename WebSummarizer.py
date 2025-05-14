@@ -21,7 +21,7 @@ except subprocess.CalledProcessError:
 systemPrompt = (
     "You are an assistant that analyzes the contents of a website "
     "and provides a short summary, ignoring text that might be navigation related. "
-    "Respond in markdown"
+    #"Respond in markdown"
 )
 
 # headers to take care of the special case websites
@@ -68,7 +68,8 @@ def WebSummary(website):
     response = requests.post(OLLAMA_API, json=payload, headers=HEADERS)
     response.raise_for_status()
     summary = response.json()["message"]["content"]
-    display(Markdown(summary))
+    #display(Markdown(summary)) for jupyter
+    print(summary)
 
 # main code
 while True:
